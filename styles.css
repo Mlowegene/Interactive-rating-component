@@ -16,4 +16,101 @@
 body {
     font-size: 15px;
     font-family: 'Overpass', sans-serif;
+    background: hsl(216, 12%, 8%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    padding: 30px;
+    background-color: hsl(213, 19%, 18%);
+    margin-top: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 80px 0px ;
+    
+}
+.img img{
+    background-color: hsl(213, 19%, 18%);
+    box-shadow: 0px 0px 80px 0px;
+    border-radius: 50%;
+    padding: 13px;
+    /* margin: 10px; */
+}
+
+.desc {
+    text-align: left;
+    margin: 10px 0;
+}
+
+.desc h2 {
+    color: hsl(0, 0%, 100%);
+    margin: 10px 0;
+}
+
+.desc p {
+    color: hsl(217, 12%, 63%);
+}
+
+.number {
+    margin: 15px 0;
+}
+.number ul{
+    list-style-type: none;
+    color: hsl(217, 12%, 63%);
+    display: flex;
+    justify-content: space-between;   
+}
+
+.number ul li {
+    background-color: hsl(213, 19%, 18%);
+    box-shadow: 0px 0px 80px 0px;
+    border-radius: 50%;
+    padding: 13px;
+    text-align: center;
+    width: 40px;
+}
+
+.number ul li:hover {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.number ul li:active {
+    background-color: hsl(217, 12%, 63%);
+    transition: ease 0.5s;
+}
+
+.btn button {
+    color: hsl(0, 0%, 100%);
+    border: none;
+    background-color: hsl(25, 97%, 53%);
+    padding: 10px 120px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(0, 0%, 100%);
+    transition: ease 0.5s;
+}
+
+
+
+.attribution { 
+    font-size: 15px; text-align: center;
+    margin-top: 10rem;
+    color: hsl(0, 0%, 100%);
+ }
+ .attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
 }
