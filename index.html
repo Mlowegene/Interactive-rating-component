@@ -19,7 +19,7 @@
 
   <!-- Rating state start -->
  <div class="container">
-  <div class="card">
+  <div class="card" id="ratingCard">
     <div class="img">
       <img src="/images/icon-star.svg" alt="icon-star" />
     </div>
@@ -30,24 +30,45 @@
     </div>
     <div class="number">
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
+        <li id="li1">1</li>
+        <li id="li2">2</li>
+        <li id="li3">3</li>
+        <li id="li4">4</li>
+        <li id="li5">5</li>
       </ul>
     </div>
     <div class="btn">
-      <button>Submit</button>
+      <button class="submit">Submit</button>
     </div>
   </div>
  </div>
   
   <!-- Rating state end -->
 
+  <!-- Thank you state start -->
+  <div class="container">
+    <div class="card" id="card1">
+      <div class="thank-img">
+        <img src="/images/illustration-thank-you.svg" alt="thank-you icon" />
+      </div>
+      <div class="rate">
+        <p class="rating-desc"></p>
+        <!-- You selected 4 out of 5 -->
+      </div>
+      <div class="thank-desc">
+        <h3>Thank you!</h3>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+          don’t hesitate to get in touch!</p>
+      </div>
+    </div>
+  </div>
+    <!-- Thank you state end -->
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Mlowegene/Interactive-rating-component">Mlowegene</a>.
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
