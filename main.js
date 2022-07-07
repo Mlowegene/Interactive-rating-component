@@ -17,28 +17,59 @@ function printPage(){
 
 }
 
+// const list = document.querySelectorAll('li');
+// current_rating = document.querySelector('.rating-desc');
+// list.forEach((listIterm, i) => {
+//     listIterm.onclick = function () {
+//         let current_iterm = i + 1;
+//         current_rating.innerText = `You selected ${current_iterm} out of 5`;
+
+//         list.forEach((listIterm, j) => {
+//             listIterm.style.backgroundColor = 'hsl(213, 19%, 18%)';
+//                 listIterm.style.color = 'hsl(217, 12%, 63%)';
+//             if(current_iterm >= j+1) {
+//                 listIterm.style.backgroundColor = 'hsl(217, 12%, 63%)';
+//                 listIterm.style.color = 'hsl(0, 0%, 100%)';
+//             }else {
+//                 console.log("hello bibi");
+    
+//             }
+//         })
+//     }
+// })
+
+const setSelectedRating = current_iterm => {
+    current_rating = document.querySelector('.rating-desc');
+    current_rating.innerText = `You selected ${current_iterm} out of 5`;
+}
+
+const resetListItemRating = listIterm => {
+    listIterm.style.backgroundColor = 'hsl(213, 19%, 18%)';
+    listIterm.style.color = 'hsl(217, 12%, 63%)';
+}
+
+const paintRating = (list,current_iterm) => {
+    list.forEach((listIterm, j) => {
+        resetListItemRating(listIterm);
+        if(current_iterm >= j+1) {
+            listIterm.style.backgroundColor = 'hsl(217, 12%, 63%)';
+            listIterm.style.color = 'hsl(0, 0%, 100%)';
+        }
+    })
+}
+
+const registerListItemOnClickHandler = () => {
 const list = document.querySelectorAll('li');
-current_rating = document.querySelector('.rating-desc');
 list.forEach((listIterm, i) => {
     listIterm.onclick = function () {
         let current_iterm = i + 1;
-        current_rating.innerText = `You selected ${current_iterm} out of 5`;
-
-        list.forEach((listIterm, j) => {
-            listIterm.style.backgroundColor = 'hsl(213, 19%, 18%)';
-                listIterm.style.color = 'hsl(217, 12%, 63%)';
-            if(current_iterm >= j+1) {
-                listIterm.style.backgroundColor = 'hsl(217, 12%, 63%)';
-                listIterm.style.color = 'hsl(0, 0%, 100%)';
-            }else {
-                console.log("hello bibi");
-    
-            }
-        })
+        setSelectedRating(current_iterm);
+        paintRating(list,current_iterm);
     }
 })
+}
 
-
+registerListItemOnClickHandler();
 
 
  
